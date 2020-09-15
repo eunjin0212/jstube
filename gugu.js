@@ -9,19 +9,19 @@ document.body.append(word);
 var form = document.createElement(`form`);
 document.body.append(form);
 var input = document.createElement(`input`);
-input.type = `Number`;
+input.type = Number;
 form.append(input);
 var btn = document.createElement(`button`);
 btn.textContent = "입력!";
 form.append(btn);
-var result = document.createElement(`div`);
-document.body.append(result);
+var 결과창 = document.createElement(`div`);
+document.body.append(결과창);
 
 form.addEventListener(`submit`, function callback(event) {
   event.preventDefault();
   console.log(result, input.value);
-  if (Number(input.value) === result) {
-    result.textContent = "딩동댕";
+  if (result === Number(input.value)) {
+    결과창.textContent = "딩동댕";
     number1 = Math.ceil(Math.random() * 9);
     number2 = Math.ceil(Math.random() * 9);
     result = number1 * number2;
@@ -29,7 +29,7 @@ form.addEventListener(`submit`, function callback(event) {
     input.value = "";
     input.focus();
   } else {
-    result.textContent = "땡땡땡!!!바부야";
+    결과창.textContent = "땡땡땡!!!바부야";
     input.value = "";
     input.focus();
   }
