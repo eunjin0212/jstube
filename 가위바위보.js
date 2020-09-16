@@ -46,10 +46,11 @@ document.querySelectorAll(".btn").forEach(function (btn) {
     var 나의선택 = this.textContent;
     var 나의점수 = 점수표[나의선택];
     var 컴퓨터점수 = 점수표[컴퓨터의선택(이미지좌표)];
+    var 점수차 = 나의점수 - 컴퓨터점수;
 
-    if (나의점수 - 컴퓨터점수 === 0) {
+    if (점수차 === 0) {
       console.log("비겼습니다");
-    } else if ([-1, 2].includes(나의점수 - 컴퓨터점수)) {
+    } else if ([-1, 2].includes(점수차)) {
       console.log("당신이 이겼습니다");
     } else {
       console.log("당신이 졌습니다");
